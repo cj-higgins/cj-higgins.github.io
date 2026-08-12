@@ -67,17 +67,21 @@
     .tag{padding:6px 10px;border-radius:999px;background:var(--tag);color:var(--accent-dark);font-size:.78rem;font-weight:700}
     .card-links{display:flex;flex-wrap:wrap;gap:16px;margin-top:auto;padding-top:27px;border-top:1px solid var(--line)}
     .card-links a{color:var(--accent);font-size:.9rem;font-weight:800;text-underline-offset:4px}
-    .about{display:grid;grid-template-columns:.75fr 1.25fr;gap:36px;padding:42px;background:var(--accent-dark);border-radius:var(--radius);color:#f7f5ef}
+    .about{display:grid;grid-template-columns:minmax(145px,.6fr) minmax(0,1.2fr) minmax(220px,.55fr);gap:38px;align-items:start;padding:42px;background:var(--accent-dark);border-radius:var(--radius);color:#f7f5ef}
     .about h2{font-size:clamp(1.9rem,4vw,3rem)}
     .about-copy{max-width:690px;font-size:1.04rem}
     .about-copy p{margin-top:0}
+    .about-copy p:last-child{margin-bottom:0}
     .about-copy a{color:#fff;text-underline-offset:4px}
+    .about-photo{margin:0;align-self:end;justify-self:end;width:100%;max-width:285px}
+    .about-photo img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 38%;border:1px solid rgba(255,255,255,.18);border-radius:14px;box-shadow:0 18px 40px rgba(0,0,0,.18)}
     footer{padding:30px 0 42px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}
     .footer-row{display:flex;align-items:center;justify-content:space-between;gap:22px}
     .footer-links{display:flex;flex-wrap:wrap;gap:16px}
     .footer-links a{text-underline-offset:3px}
     :focus-visible{outline:3px solid rgba(31,93,80,.35);outline-offset:4px}
-    @media(max-width:820px){.hero,.section-heading,.about{grid-template-columns:1fr}.hero{padding:68px 0 54px}.hero-side{max-width:590px}.work-grid{grid-template-columns:1fr}.about{padding:30px}}
+    @media(max-width:900px){.about{grid-template-columns:.65fr 1.35fr}.about-photo{grid-column:2;justify-self:start;max-width:320px}}
+    @media(max-width:820px){.hero,.section-heading{grid-template-columns:1fr}.hero{padding:68px 0 54px}.hero-side{max-width:590px}.work-grid{grid-template-columns:1fr}.about{grid-template-columns:1fr;padding:30px}.about-photo{grid-column:1;justify-self:start;width:min(100%,340px);margin-top:8px}}
     @media(max-width:560px){.shell{width:min(calc(100% - 26px),var(--max))}header{padding:20px 0}nav{align-items:flex-start}.nav-links{gap:10px 14px;font-size:.84rem}section{padding:52px 0}.card{padding:24px}.footer-row{align-items:flex-start;flex-direction:column}}
   </style>
 </head>
@@ -186,6 +190,9 @@
             <p>I have worked on safety evaluation for frontier AI systems and contributed to benchmarks designed to test difficult forms of reasoning. I also publish <a href="https://higginscj.substack.com/" target="_blank" rel="noreferrer">Curdled Incompleteness Theorem</a>, an independent publication about AI, language, mathematics, and philosophy.</p>
             <p>My other work includes <a href="https://www.washingtonblade.com/author/cj-higgins/" target="_blank" rel="noreferrer">reported journalism</a>, <a href="https://philpeople.org/profiles/cj-higgins" target="_blank" rel="noreferrer">academic research</a>, and writing on politics, technology, and culture.</p>
           </div>
+          <figure class="about-photo">
+            <img src="/cj-higgins.jpg" alt="CJ Higgins" loading="lazy">
+          </figure>
         </div>
       </section>
     </div>
