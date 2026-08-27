@@ -1,0 +1,85 @@
+name: Contra one-shot repair
+
+on:
+  push:
+    paths:
+      - '.github/workflows/contra-one-shot-repair.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Rebuild final Iceland rerun and Morocco diagnostic
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          python - <<'PY'
+          from pathlib import Path
+          import base64, gzip, hashlib, re
+
+          root = Path('.')
+
+          # Reconstruct the authoritative final/rerun Iceland HTML from staged chunks.
+          repair = root / 'contra-case-study/.repair'
+          parts = sorted(repair.glob('iceland.part*'))
+          if len(parts) != 9:
+              raise RuntimeError(f'Expected 9 Iceland chunks, found {len(parts)}')
+          encoded = ''.join(p.read_text().strip() for p in parts)
+          iceland = gzip.decompress(base64.b64decode(encoded))
+          expected = 'aec0057fa83468191053421cc667905ae9a0a6a6bfc1b324d51e2fd80d0c7bea'
+          actual = hashlib.sha256(iceland).hexdigest()
+          if actual != expected:
+              raise RuntimeError(f'Iceland integrity mismatch: {actual}')
+          (root / 'contra-case-study/ideal/03-iceland-photography/index.html').write_bytes(iceland)
+
+          # Decode the faithful Morocco source currently wrapped by the loader.
+          morocco_path = root / 'contra-case-study/diagnostic/04-morocco-cultural-journey/index.html'
+          loader = morocco_path.read_text()
+          match = re.search(r'const b="([^"]+)"', loader)
+          if not match:
+              raise RuntimeError('Morocco loader payload not found')
+          morocco_bytes = gzip.decompress(base64.b64decode(match.group(1)))
+          expected_morocco = '3bcaea60c7db447d1867f1c25affe710bcd6db94acd4e5438927173449a0e014'
+          actual_morocco = hashlib.sha256(morocco_bytes).hexdigest()
+          if actual_morocco != expected_morocco:
+              raise RuntimeError(f'Morocco integrity mismatch: {actual_morocco}')
+          morocco = morocco_bytes.decode('utf-8')
+          morocco = morocco.replace(
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Marrakech_Medina.jpg/2560px-Marrakech_Medina.jpg',
+              'assets/marrakech-medina.jpg'
+          ).replace(
+              'https://upload.wikimedia.org/wikipedia/commons/thumb/9/97/Hiking_At_Sundown_%28Unsplash%29.jpg/2560px-Hiking_At_Sundown_%28Unsplash%29.jpg',
+              'assets/desert-evening.jpg'
+          )
+          morocco_path.write_text(morocco)
+          PY
+
+          mkdir -p contra-case-study/diagnostic/04-morocco-cultural-journey/assets
+
+          curl -fL --retry 3 --retry-delay 2 -A 'Mozilla/5.0' \
+            'https://upload.wikimedia.org/wikipedia/commons/9/97/Marrakech_Medina.jpg' \
+            -o contra-case-study/diagnostic/04-morocco-cultural-journey/assets/marrakech-medina.jpg
+
+          curl -fL --retry 3 --retry-delay 2 -A 'Mozilla/5.0' \
+            'https://upload.wikimedia.org/wikipedia/commons/9/97/Hiking_At_Sundown_%28Unsplash%29.jpg' \
+            -o contra-case-study/diagnostic/04-morocco-cultural-journey/assets/desert-evening.jpg
+
+          test -s contra-case-study/diagnostic/04-morocco-cultural-journey/assets/marrakech-medina.jpg
+          test -s contra-case-study/diagnostic/04-morocco-cultural-journey/assets/desert-evening.jpg
+
+          # Temporary reconstruction data is no longer needed after the repair.
+          rm -rf contra-case-study/.repair
+
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add -A
+          git commit -m 'Repair Contra Morocco assets and Iceland rerun'
+          git push
