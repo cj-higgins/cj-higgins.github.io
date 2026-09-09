@@ -37,15 +37,16 @@
     .nav-links a{color:var(--muted);text-decoration:none}
     .nav-links a:hover,.nav-links a:focus-visible{color:var(--accent)}
     main{padding-bottom:72px}
-    .hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(310px,.55fr);gap:58px;align-items:start;padding:50px 0 52px}
+    .hero{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(320px,.65fr);gap:52px;align-items:start;padding:54px 0 58px}
     h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.13;letter-spacing:-.025em}
     h1{max-width:760px;margin:0;font-size:clamp(2.4rem,5vw,4.4rem);font-weight:500}
     .hero-copy{max-width:730px;margin:24px 0 0;color:var(--muted);font-size:clamp(1.05rem,2vw,1.22rem)}
-    .hero-side{display:grid;grid-template-columns:104px minmax(0,1fr);gap:18px 20px;align-items:start;padding:24px;background:rgba(255,253,248,.68);border:1px solid var(--line);border-radius:var(--radius)}
-    .hero-photo{display:block;width:104px;aspect-ratio:4/5;object-fit:cover;object-position:center 38%;margin:0;border:1px solid var(--line);border-radius:12px;box-shadow:0 10px 24px rgba(35,42,37,.08)}
-    .hero-side p{margin:0;color:var(--muted);font-size:.94rem;line-height:1.5}
-    .actions{grid-column:1/-1;display:flex;flex-wrap:wrap;gap:10px;margin-top:2px}
-    .button{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 14px;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:#fff;font-size:.86rem;font-weight:750;text-decoration:none;transition:transform 150ms ease,background 150ms ease}
+    .hero-summary{max-width:730px;margin:30px 0 0;padding:24px 26px;background:rgba(255,253,248,.68);border:1px solid var(--line);border-radius:var(--radius)}
+    .hero-summary p{margin:0;color:var(--muted);font-size:.98rem}
+    .hero-side{margin:0;align-self:start}
+    .hero-photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 38%;border:1px solid var(--line);border-radius:18px;box-shadow:0 14px 32px rgba(35,42,37,.10)}
+    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px}
+    .button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:#fff;font-size:.9rem;font-weight:750;text-decoration:none;transition:transform 150ms ease,background 150ms ease}
     .button:hover,.button:focus-visible{background:var(--accent-dark);transform:translateY(-1px)}
     .button.secondary{background:transparent;color:var(--accent)}
     .button.secondary:hover,.button.secondary:focus-visible{background:var(--tag)}
@@ -81,9 +82,9 @@
     .footer-links{display:flex;flex-wrap:wrap;gap:16px}
     .footer-links a{text-underline-offset:3px}
     :focus-visible{outline:3px solid rgba(31,93,80,.35);outline-offset:4px}
-    @media(max-width:900px){.about{grid-template-columns:.65fr 1.35fr}}
-    @media(max-width:820px){.hero,.section-heading{grid-template-columns:1fr}.hero{padding:42px 0 48px}.hero-side{max-width:590px}.work-grid{grid-template-columns:1fr}.about{grid-template-columns:1fr;padding:30px}}
-    @media(max-width:560px){.shell{width:min(calc(100% - 26px),var(--max))}header{padding:20px 0}nav{align-items:flex-start}.nav-links{gap:10px 14px;font-size:.84rem}.hero-side{grid-template-columns:86px minmax(0,1fr);padding:20px}.hero-photo{width:86px}section{padding:52px 0}.card{padding:24px}.footer-row{align-items:flex-start;flex-direction:column}}
+    @media(max-width:900px){.hero{grid-template-columns:minmax(0,1.15fr) minmax(300px,.85fr);gap:38px}.about{grid-template-columns:.65fr 1.35fr}}
+    @media(max-width:820px){.hero,.section-heading{grid-template-columns:1fr}.hero{padding:44px 0 50px}.hero-side{width:min(100%,420px)}.work-grid{grid-template-columns:1fr}.about{grid-template-columns:1fr;padding:30px}}
+    @media(max-width:560px){.shell{width:min(calc(100% - 26px),var(--max))}header{padding:20px 0}nav{align-items:flex-start}.nav-links{gap:10px 14px;font-size:.84rem}.hero-summary{padding:20px}.hero-side{width:min(100%,360px)}section{padding:52px 0}.card{padding:24px}.footer-row{align-items:flex-start;flex-direction:column}}
   </style>
 </head>
 <body>
@@ -108,16 +109,18 @@
         <div>
           <h1 id="intro-title">AI evaluation, product policy, and model behavior.</h1>
           <p class="hero-copy">I combine qualitative judgment, quantitative analysis, and workflow design to make complex systems more legible and reliable.</p>
-        </div>
-        <aside class="hero-side" aria-label="Professional summary">
-          <img class="hero-photo" src="/cj-higgins.jpg" alt="CJ Higgins" loading="eager">
-          <p>Political theory Ph.D. with a mathematics B.A. and experience in AI safety evaluation, benchmark design and QA, empirical research, and analytical writing.</p>
-          <div class="actions">
-            <a class="button" href="#work">View the work</a>
-            <a class="button secondary" href="/CJ-Higgins-Resume.pdf" download>Download résumé</a>
-            <a class="button secondary" href="mailto:ch.ja.higgins@gmail.com">Email me</a>
+          <div class="hero-summary" aria-label="Professional summary">
+            <p>Political theory Ph.D. with a mathematics B.A. and experience in AI safety evaluation, benchmark design and QA, empirical research, and analytical writing.</p>
+            <div class="actions">
+              <a class="button" href="#work">View the work</a>
+              <a class="button secondary" href="/CJ-Higgins-Resume.pdf" download>Download résumé</a>
+              <a class="button secondary" href="mailto:ch.ja.higgins@gmail.com">Email me</a>
+            </div>
           </div>
-        </aside>
+        </div>
+        <figure class="hero-side" aria-label="Portrait of CJ Higgins">
+          <img class="hero-photo" src="/cj-higgins.jpg" alt="CJ Higgins" loading="eager">
+        </figure>
       </section>
       <section id="work" aria-labelledby="work-title">
         <div class="section-heading">
