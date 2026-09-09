@@ -29,6 +29,7 @@
     h1{max-width:790px;margin:0;font-size:clamp(2.4rem,5vw,4.4rem);font-weight:500}
     .hero-copy{max-width:760px;margin:24px 0 0;color:var(--muted);font-size:clamp(1.05rem,2vw,1.22rem)}
     .hero-side{padding:28px;background:rgba(255,253,248,.68);border:1px solid var(--line);border-radius:var(--radius)}
+    .hero-photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 38%;margin:0 0 22px;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 28px rgba(35,42,37,.08)}
     .hero-side p{margin:0;color:var(--muted);font-size:.97rem}.hero-side strong{color:var(--text)}
     .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
     .button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:#fff;font-size:.9rem;font-weight:750;text-decoration:none;transition:transform 150ms ease,background 150ms ease}
@@ -60,7 +61,7 @@
   <header>
     <div class="shell">
       <nav aria-label="Primary navigation">
-        <a class="name" href="#top">CJ Higgins</a>
+        <a class="name" href="#top">C.J. Higgins, PhD</a>
         <div class="nav-links">
           <a href="#experience">Experience</a>
           <a href="#fit">Areas of fit</a>
@@ -79,7 +80,8 @@
           <p class="hero-copy">I spent eight years at Johns Hopkins across doctoral research, teaching, graduate recruitment, and university service, with earlier experience in admissions and institutional operations. My recent work leading evaluation and quality systems in AI has sharpened the same skills I bring to higher education: translating broad goals into clear processes, coordinating people and schedules, assessing quality, and communicating across different kinds of expertise.</p>
         </div>
         <aside class="hero-side" aria-label="Professional summary">
-          <p><strong>Christopher J. Higgins, Ph.D.</strong><br>Political Science, Johns Hopkins University<br>B.A. Mathematics & Political Science, Williams College<br>Brooklyn, New York</p>
+          <img class="hero-photo" src="/cj-higgins.jpg" alt="C.J. Higgins" loading="eager">
+          <p><strong>C.J. Higgins, PhD</strong><br>Political Science, Johns Hopkins University<br>B.A. Mathematics & Political Science, Williams College<br>Brooklyn, New York</p>
           <div class="actions">
             <a class="button" href="mailto:ch.ja.higgins@gmail.com">Email me</a>
             <a class="button secondary" href="https://www.linkedin.com/in/higginscj/" target="_blank" rel="noreferrer">LinkedIn</a>
@@ -152,9 +154,9 @@
       <section aria-labelledby="bridge-title">
         <div class="bridge">
           <div>
-            <h2 id="bridge-title">A recent detour that is useful here.</h2>
-            <p>Since leaving Hopkins, I have worked in AI evaluation and model-behavior research. That work looks different from university administration on the surface, but much of it is institution-building in miniature: turning ambiguous goals into usable criteria, coordinating reviewers, identifying where systems break down, and improving consistency without eliminating judgment.</p>
-            <p>I see that work as complementary to, rather than separate from, my higher-education background. For the technical side of my current work, you can <a href="/">view my AI and research portfolio</a>.</p>
+            <h2 id="bridge-title">What my recent AI work adds.</h2>
+            <p>Since leaving Hopkins, I have worked in AI evaluation and model-behavior research. Much of that work is institution-building in miniature: turning ambiguous goals into usable criteria, coordinating reviewers, identifying where systems break down, and improving consistency without eliminating judgment.</p>
+            <p>That experience adds a more technical and systems-oriented layer to my higher-education background. For the technical side of my current work, you can <a href="/">view my AI and research portfolio</a>.</p>
           </div>
           <div class="bridge-list" aria-label="Transferable strengths">
             <div class="bridge-item"><strong>Evaluation leadership</strong><span>Led a four-person political-science benchmark team reviewing hundreds of prompts and evaluations through a multi-pass QA process.</span></div>
