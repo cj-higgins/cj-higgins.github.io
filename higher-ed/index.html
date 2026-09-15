@@ -3,186 +3,478 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="CJ Higgins — higher education, academic programs, assessment, admissions, and institutional operations.">
-  <meta name="theme-color" content="#f4f0e7">
-  <link rel="canonical" href="https://cj-higgins.github.io/higher-ed/">
-  <meta property="og:title" content="CJ Higgins — Higher Education & Academic Programs">
-  <meta property="og:description" content="Experience across academic programming, student assessment, graduate recruitment, admissions, and institutional operations.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://cj-higgins.github.io/higher-ed/">
   <title>CJ Higgins — Higher Education & Academic Programs</title>
+  <meta name="description" content="CJ Higgins — higher education, academic programs, assessment, admissions, and institutional work.">
   <style>
-    :root{--bg:#f4f0e7;--surface:#fffdf8;--text:#202421;--muted:#626a64;--line:#d7d1c5;--accent:#205d50;--accent-dark:#17463d;--tag:#e6eee9;--shadow:0 14px 36px rgba(35,42,37,.07);--radius:18px;--max:1120px}
+    :root{
+      --blue:#123a63;
+      --blue-2:#1f5b94;
+      --ink:#1b232b;
+      --muted:#68727c;
+      --line:#dbe1e7;
+      --paper:#ffffff;
+      --wash:#f4f7fa;
+      --rail:330px;
+      --max:930px;
+    }
+
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.62;-webkit-font-smoothing:antialiased}
-    a{color:inherit}
-    .shell{width:min(calc(100% - 40px),var(--max));margin:0 auto}
-    header{padding:27px 0;border-bottom:1px solid var(--line)}
-    nav{display:flex;align-items:center;justify-content:space-between;gap:24px}
-    .name{font-family:Georgia,"Times New Roman",serif;font-size:1.18rem;font-weight:700;text-decoration:none;letter-spacing:-.01em}
-    .nav-links{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:18px;font-size:.92rem}
-    .nav-links a{color:var(--muted);text-decoration:none}.nav-links a:hover,.nav-links a:focus-visible{color:var(--accent)}
-    main{padding-bottom:72px}
-    .hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(270px,.55fr);gap:58px;align-items:start;padding:58px 0 68px}
-    h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.13;letter-spacing:-.025em}
-    h1{max-width:790px;margin:0;font-size:clamp(2.4rem,5vw,4.4rem);font-weight:500}
-    .hero-copy{max-width:760px;margin:24px 0 0;color:var(--muted);font-size:clamp(1.05rem,2vw,1.22rem)}
-    .hero-side{padding:28px;background:rgba(255,253,248,.68);border:1px solid var(--line);border-radius:var(--radius)}
-    .hero-photo{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 38%;margin:0 0 22px;border:1px solid var(--line);border-radius:14px;box-shadow:0 12px 28px rgba(35,42,37,.08)}
-    .hero-side p{margin:0;color:var(--muted);font-size:.97rem}.hero-side strong{color:var(--text)}
-    .actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
-    .button{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:10px 16px;border:1px solid var(--accent);border-radius:999px;background:var(--accent);color:#fff;font-size:.9rem;font-weight:750;text-decoration:none;transition:transform 150ms ease,background 150ms ease}
-    .button:hover,.button:focus-visible{background:var(--accent-dark);transform:translateY(-1px)}
-    .button.secondary{background:transparent;color:var(--accent)}.button.secondary:hover,.button.secondary:focus-visible{background:var(--tag)}
-    section{padding:68px 0}
-    .section-heading{display:grid;grid-template-columns:.75fr 1.25fr;gap:36px;margin-bottom:32px;align-items:start}
-    h2{margin:0;font-size:clamp(2rem,4vw,3.25rem);font-weight:500}.section-intro{max-width:680px;margin:3px 0 0;color:var(--muted)}
-    .experience-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
-    .card{display:flex;flex-direction:column;min-height:100%;padding:31px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow)}
-    .card-kicker{margin:0 0 11px;color:var(--accent);font-size:.74rem;font-weight:800;letter-spacing:.11em;text-transform:uppercase}
-    h3{margin:0 0 15px;font-size:clamp(1.45rem,2.6vw,1.9rem);font-weight:500}
-    .meta{margin:-7px 0 18px;color:var(--muted);font-size:.86rem;font-weight:700}
-    .card ul{margin:0;padding-left:1.15rem}.card li+li{margin-top:10px}.card p{margin:0;color:var(--muted)}
-    .fit-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
-    .fit{padding:26px;background:transparent;border-top:1px solid var(--line)}
-    .fit h3{font-size:1.35rem;margin-bottom:10px}.fit p{margin:0;color:var(--muted);font-size:.96rem}
-    .bridge{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(240px,.8fr);gap:38px;align-items:start;padding:42px;background:var(--accent-dark);border-radius:var(--radius);color:#f7f5ef}
-    .bridge h2{font-size:clamp(1.9rem,4vw,3rem)}.bridge p{margin-top:0}.bridge p:last-child{margin-bottom:0}.bridge a{color:#fff;text-underline-offset:4px}
-    .bridge-list{display:grid;gap:13px}.bridge-item{padding:15px 0;border-top:1px solid rgba(255,255,255,.2)}.bridge-item:first-child{border-top:0;padding-top:0}.bridge-item strong{display:block;margin-bottom:2px}
-    .personal{max-width:760px;margin:34px auto 0;text-align:center;color:var(--muted);font-family:Georgia,"Times New Roman",serif;font-size:1.08rem;font-style:italic}
-    .personal a{color:inherit;text-underline-offset:4px}
-    footer{padding:30px 0 42px;border-top:1px solid var(--line);color:var(--muted);font-size:.88rem}.footer-row{display:flex;align-items:center;justify-content:space-between;gap:22px}.footer-links{display:flex;flex-wrap:wrap;gap:16px}.footer-links a{text-underline-offset:3px}
-    :focus-visible{outline:3px solid rgba(31,93,80,.35);outline-offset:4px}
-    @media(max-width:900px){.fit-grid{grid-template-columns:1fr 1fr}.bridge{grid-template-columns:1fr}}
-    @media(max-width:820px){.hero,.section-heading{grid-template-columns:1fr}.hero{padding:48px 0 54px}.hero-side{max-width:590px}.experience-grid{grid-template-columns:1fr}.fit-grid{grid-template-columns:1fr}}
-    @media(max-width:560px){.shell{width:min(calc(100% - 26px),var(--max))}header{padding:20px 0}nav{align-items:flex-start}.nav-links{gap:10px 14px;font-size:.84rem}section{padding:52px 0}.card{padding:24px}.bridge{padding:30px}.footer-row{align-items:flex-start;flex-direction:column}}
+    body{
+      margin:0;
+      background:var(--paper);
+      color:var(--ink);
+      font-family:Arial,Helvetica,sans-serif;
+      line-height:1.58;
+      -webkit-font-smoothing:antialiased;
+    }
+    a{
+      color:var(--blue-2);
+      text-decoration-thickness:1px;
+      text-underline-offset:3px;
+    }
+
+    .layout{
+      min-height:100vh;
+      display:grid;
+      grid-template-columns:var(--rail) 1fr;
+    }
+
+    .rail{
+      min-height:100vh;
+      background:var(--blue);
+      color:#fff;
+      padding:42px 34px 34px;
+      position:sticky;
+      top:0;
+      align-self:start;
+      display:flex;
+      flex-direction:column;
+    }
+    .portrait{
+      width:100%;
+      aspect-ratio:4/5;
+      object-fit:cover;
+      object-position:center 36%;
+      display:block;
+      margin-bottom:28px;
+      border:0;
+    }
+    .rail h1{
+      margin:0;
+      font-size:2.2rem;
+      line-height:1;
+      font-weight:700;
+      letter-spacing:-.035em;
+    }
+    .rail .role{
+      margin:12px 0 0;
+      color:#c8d7e8;
+      font-size:.83rem;
+      line-height:1.45;
+      text-transform:uppercase;
+      letter-spacing:.08em;
+    }
+    .rail .meta{
+      margin:30px 0 0;
+      padding-top:24px;
+      border-top:1px solid rgba(255,255,255,.25);
+      color:#d6e0eb;
+      font-size:.88rem;
+    }
+    .rail .meta p{margin:0 0 14px}
+    .rail .meta strong{
+      display:block;
+      color:#fff;
+      font-size:.74rem;
+      text-transform:uppercase;
+      letter-spacing:.09em;
+      margin-bottom:3px;
+    }
+    .rail nav{
+      margin-top:32px;
+      padding-top:24px;
+      border-top:1px solid rgba(255,255,255,.25);
+      display:grid;
+      gap:10px;
+      font-size:.88rem;
+    }
+    .rail nav a{
+      color:#fff;
+      text-decoration:none;
+    }
+    .rail nav a:hover{text-decoration:underline}
+
+    .main{
+      min-width:0;
+    }
+    .topbar{
+      border-bottom:1px solid var(--line);
+      padding:17px 34px;
+      display:flex;
+      justify-content:flex-end;
+      gap:18px;
+      flex-wrap:wrap;
+      font-size:.78rem;
+      color:var(--muted);
+      text-transform:uppercase;
+      letter-spacing:.07em;
+    }
+    .topbar a{
+      color:inherit;
+      text-decoration:none;
+    }
+    .topbar a:hover{color:var(--blue)}
+
+    .content{
+      width:min(calc(100% - 64px),var(--max));
+      margin:0 auto;
+      padding:70px 0 80px;
+    }
+
+    .opening{
+      padding-bottom:52px;
+    }
+    .opening .label{
+      margin:0 0 13px;
+      color:var(--blue-2);
+      font-size:.76rem;
+      text-transform:uppercase;
+      letter-spacing:.1em;
+      font-weight:700;
+    }
+    .opening h2{
+      margin:0;
+      max-width:760px;
+      font-size:clamp(2.8rem,6vw,5.8rem);
+      line-height:.96;
+      letter-spacing:-.055em;
+      font-weight:700;
+      color:var(--ink);
+    }
+    .opening p{
+      margin:30px 0 0;
+      max-width:760px;
+      font-size:1.14rem;
+      line-height:1.72;
+      color:#404a54;
+    }
+
+    section{
+      padding:44px 0;
+      border-top:3px solid var(--blue);
+    }
+    .section-title{
+      display:grid;
+      grid-template-columns:180px 1fr;
+      gap:32px;
+      align-items:start;
+      margin-bottom:28px;
+    }
+    .section-title h3{
+      margin:0;
+      font-size:.82rem;
+      text-transform:uppercase;
+      letter-spacing:.11em;
+      color:var(--blue);
+    }
+    .section-title p{
+      margin:0;
+      max-width:720px;
+      color:var(--muted);
+      font-size:.98rem;
+    }
+
+    .areas{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:0 34px;
+      border-top:1px solid var(--line);
+    }
+    .area{
+      padding:20px 0 22px;
+      border-bottom:1px solid var(--line);
+    }
+    .area:nth-child(even){
+      border-left:1px solid var(--line);
+      padding-left:28px;
+    }
+    .area h4{
+      margin:0 0 6px;
+      font-size:1rem;
+      color:var(--ink);
+    }
+    .area p{
+      margin:0;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .entry{
+      display:grid;
+      grid-template-columns:180px 1fr;
+      gap:32px;
+      padding:27px 0 30px;
+      border-top:1px solid var(--line);
+    }
+    .entry:first-of-type{border-top:0;padding-top:0}
+    .entry-meta{
+      color:var(--muted);
+      font-size:.82rem;
+      line-height:1.5;
+    }
+    .entry-meta strong{
+      display:block;
+      color:var(--blue);
+      font-size:.85rem;
+      margin-bottom:2px;
+    }
+    .entry-body h4{
+      margin:0 0 10px;
+      font-size:1.22rem;
+      color:var(--ink);
+    }
+    .entry-body p{
+      margin:0;
+      color:#4b545d;
+    }
+    .entry-body ul{
+      margin:0;
+      padding-left:1.1rem;
+      color:#3f4851;
+    }
+    .entry-body li+li{margin-top:8px}
+
+    .about{
+      background:var(--wash);
+      margin:54px -34px 0;
+      padding:40px 34px 44px;
+      border-top:0;
+    }
+    .about .section-title{
+      margin-bottom:24px;
+    }
+    .about-copy{
+      margin-left:212px;
+      max-width:700px;
+      font-size:1.03rem;
+      color:#3e4851;
+    }
+    .about-copy p{margin-top:0}
+    .about-copy p+p{margin-top:18px}
+    .about-copy p:last-child{margin-bottom:0}
+
+    footer{
+      padding:26px 34px 38px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:.78rem;
+      display:flex;
+      justify-content:space-between;
+      gap:20px;
+      flex-wrap:wrap;
+    }
+
+    @media(max-width:900px){
+      :root{--rail:270px}
+      .rail{padding:30px 24px}
+      .content{width:min(calc(100% - 44px),var(--max))}
+      .about{margin-left:-22px;margin-right:-22px;padding-left:22px;padding-right:22px}
+      .about-copy{margin-left:0}
+    }
+
+    @media(max-width:760px){
+      .layout{grid-template-columns:1fr}
+      .rail{
+        min-height:auto;
+        position:relative;
+      }
+      .portrait{
+        width:min(100%,340px);
+      }
+      .rail nav{display:none}
+      .topbar{justify-content:flex-start;padding:14px 22px}
+      .content{width:min(calc(100% - 28px),var(--max));padding-top:48px}
+      .section-title,.entry{grid-template-columns:1fr;gap:9px}
+      .areas{grid-template-columns:1fr}
+      .area:nth-child(even){border-left:0;padding-left:0}
+      .about{margin-left:-14px;margin-right:-14px;padding-left:14px;padding-right:14px}
+    }
   </style>
 </head>
 <body>
-  <header>
-    <div class="shell">
-      <nav aria-label="Primary navigation">
-        <a class="name" href="#top">CJ Higgins, PhD</a>
-        <div class="nav-links">
-          <a href="#experience">Experience</a>
-          <a href="#fit">Areas of fit</a>
-          <a href="https://www.linkedin.com/in/higginscj/" target="_blank" rel="noreferrer">LinkedIn</a>
-          <a href="/" aria-label="View CJ Higgins's AI and research portfolio">AI & research work</a>
-        </div>
+  <div class="layout">
+    <aside class="rail">
+      <img class="portrait" src="https://raw.githubusercontent.com/cj-higgins/cj-higgins.github.io/main/cj-higgins.jpg" alt="CJ Higgins">
+      <h1>CJ Higgins</h1>
+      <p class="role">Higher Education & Academic Programs</p>
+
+      <div class="meta">
+        <p><strong>Education</strong>PhD, Political Science<br>Johns Hopkins University</p>
+        <p><strong>Undergraduate</strong>BA, Mathematics & Political Science<br>Williams College</p>
+        <p><strong>Location</strong>Brooklyn, New York</p>
+      </div>
+
+      <nav aria-label="Section navigation">
+        <a href="#background">Background</a>
+        <a href="#programs">Teaching & Programs</a>
+        <a href="#admissions">Admissions</a>
+        <a href="#institutional">Institutional Work</a>
+        <a href="#about">About</a>
       </nav>
-    </div>
-  </header>
+    </aside>
 
-  <main id="top">
-    <div class="shell">
-      <section class="hero" aria-labelledby="intro-title">
-        <div>
-          <h1 id="intro-title">Higher education, academic programs, and assessment.</h1>
-          <p class="hero-copy">I spent eight years at Johns Hopkins across doctoral research, teaching, graduate recruitment, and university service, with earlier experience in admissions and institutional operations. My recent work leading evaluation and quality systems in AI has sharpened the same skills I bring to higher education: translating broad goals into clear processes, coordinating people and schedules, assessing quality, and communicating across different kinds of expertise.</p>
-        </div>
-        <aside class="hero-side" aria-label="Professional summary">
-          <img class="hero-photo" src="/cj-higgins.jpg" alt="CJ Higgins" loading="eager">
-          <p><strong>CJ Higgins, PhD</strong><br>Political Science, Johns Hopkins University<br>B.A. Mathematics & Political Science, Williams College<br>Brooklyn, New York</p>
-          <div class="actions">
-            <a class="button" href="mailto:ch.ja.higgins@gmail.com">Email me</a>
-            <a class="button secondary" href="https://www.linkedin.com/in/higginscj/" target="_blank" rel="noreferrer">LinkedIn</a>
-          </div>
-        </aside>
-      </section>
-
-      <section id="experience" aria-labelledby="experience-title">
-        <div class="section-heading">
-          <h2 id="experience-title">Relevant experience</h2>
-          <p class="section-intro">My higher-education experience spans teaching and assessment, graduate recruitment, admissions, institutional service, event operations, and research administration.</p>
-        </div>
-        <div class="experience-grid">
-          <article class="card">
-            <p class="card-kicker">Johns Hopkins University</p>
-            <h3>Teaching, academic programs & university service</h3>
-            <p class="meta">2016–2024 · Baltimore, MD</p>
-            <ul>
-              <li>Designed and taught four writing-intensive courses as instructor of record, including original syllabi, assignments, grading rubrics, and discussion frameworks.</li>
-              <li>Coordinated two graduate recruitment open houses with a four-person team, four simultaneous departmental schedules, faculty and student participation, and a budget exceeding $2,000.</li>
-              <li>Represented Political Science on the inaugural advisory board of the SNF Agora Institute and later served as a Society of Fellows postdoctoral fellow.</li>
-              <li>Received the Dean’s Prize Fellowship for teaching effectiveness (4.75 versus a 4.14 university average) and the Dean’s Teaching Fellowship.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Minerva University</p>
-            <h3>Admissions & selection</h3>
-            <p class="meta">2014–2015 · San Francisco, CA</p>
-            <ul>
-              <li>Reviewed more than 1,000 applications for a newly established, highly selective university.</li>
-              <li>Conducted applicant interviews, maintained admissions records, and helped develop selection criteria and review practices.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Williams College</p>
-            <h3>Conference operations</h3>
-            <p class="meta">2014 · Williamstown, MA</p>
-            <ul>
-              <li>Supported conference guests through front-desk, registration, scheduling, room-access, equipment, and facilities workflows.</li>
-              <li>Maintained operational records and coordinated requests across guests, staff, and campus services.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <p class="card-kicker">Rockefeller Institute of Government</p>
-            <h3>Research & administrative support</h3>
-            <p class="meta">2011 · Albany, NY</p>
-            <ul>
-              <li>Supported front-desk operations, calls, calendaring, and donor/contact records for a public-policy research institute.</li>
-              <li>Built datasets on SNAP assistance and child poverty for the New York State Statistical Yearbook.</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <section id="fit" aria-labelledby="fit-title">
-        <div class="section-heading">
-          <h2 id="fit-title">Areas of fit</h2>
-          <p class="section-intro">I am most interested in roles where academic judgment and institutional execution meet.</p>
-        </div>
-        <div class="fit-grid">
-          <div class="fit"><h3>Academic & doctoral programs</h3><p>Graduate and doctoral affairs, academic initiatives, program administration, recruitment, events, and cross-unit coordination.</p></div>
-          <div class="fit"><h3>Assessment & advising strategy</h3><p>Student assessment, program evaluation, shared standards, quality improvement, and technology-enabled academic support.</p></div>
-          <div class="fit"><h3>Admissions & selection</h3><p>High-volume application review, interviewing, criteria development, record coordination, and structured judgment.</p></div>
-        </div>
-      </section>
-
-      <section aria-labelledby="bridge-title">
-        <div class="bridge">
-          <div>
-            <h2 id="bridge-title">What my recent AI work adds.</h2>
-            <p>Since leaving Hopkins, I have worked in AI evaluation and model-behavior research. Much of that work is institution-building in miniature: turning ambiguous goals into usable criteria, coordinating reviewers, identifying where systems break down, and improving consistency without eliminating judgment.</p>
-            <p>That experience adds a more technical and systems-oriented layer to my higher-education background. For the technical side of my current work, you can <a href="/">view my AI and research portfolio</a>.</p>
-          </div>
-          <div class="bridge-list" aria-label="Transferable strengths">
-            <div class="bridge-item"><strong>Evaluation leadership</strong><span>Led a four-person political-science benchmark team reviewing hundreds of prompts and evaluations through a multi-pass QA process.</span></div>
-            <div class="bridge-item"><strong>Operational standards</strong><span>Translate broad goals and evolving guidance into criteria, reviewer instructions, and consistent decisions.</span></div>
-            <div class="bridge-item"><strong>Applied AI &amp; data</strong><span>Work with Python, Pandas, NumPy, and scikit-learn through Generative AI Engineering training; independently designed and analyzed a 324-turn GPT-4o-mini experiment on chatbot behavior and safety prompting.</span></div>
-            <div class="bridge-item"><strong>Communication</strong><span>Background spanning university teaching, peer-reviewed scholarship, public writing, and reported journalism.</span></div>
-          </div>
-        </div>
-        <p class="personal">I also <a href="https://anywherebutdays.substack.com/" target="_blank" rel="noreferrer">write philosophical reflections</a>, <a href="https://higginscj.substack.com/" target="_blank" rel="noreferrer">write about AI, language, mathematics, and politics</a>, and run around Brooklyn.</p>
-      </section>
-    </div>
-  </main>
-
-  <footer>
-    <div class="shell footer-row">
-      <span>© 2026 Christopher J. Higgins</span>
-      <div class="footer-links">
+    <div class="main">
+      <div class="topbar">
         <a href="mailto:ch.ja.higgins@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/higginscj/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="/">AI & research portfolio</a>
-        <a href="https://higginscj.substack.com/" target="_blank" rel="noreferrer">AI writing</a>
-        <a href="https://anywherebutdays.substack.com/" target="_blank" rel="noreferrer">Philosophical writing</a>
+        <a href="https://cj-higgins.github.io/" target="_blank" rel="noreferrer">AI & Research</a>
       </div>
+
+      <main class="content">
+        <div class="opening">
+          <p class="label">Higher Education</p>
+          <h2>Academic programs, assessment, admissions, and university operations.</h2>
+          <p>
+            I spent eight years at Johns Hopkins as a doctoral student, instructor, university-service participant, and postdoctoral fellow, with earlier experience in admissions at Minerva University and institutional operations at Williams College and the Rockefeller Institute of Government.
+          </p>
+        </div>
+
+        <section id="background">
+          <div class="section-title">
+            <h3>Background</h3>
+            <p>
+              My higher-education work has included course design and teaching, graduate recruitment, admissions review and interviewing, university service, conference operations, and research support.
+            </p>
+          </div>
+
+          <div class="areas">
+            <div class="area">
+              <h4>Academic programs</h4>
+              <p>Graduate and doctoral affairs, program coordination, recruitment, events, and cross-unit work.</p>
+            </div>
+            <div class="area">
+              <h4>Assessment</h4>
+              <p>Course design, grading standards, evaluation criteria, quality review, and process improvement.</p>
+            </div>
+            <div class="area">
+              <h4>Admissions & selection</h4>
+              <p>Application review, interviews, selection criteria, records, and structured judgment.</p>
+            </div>
+            <div class="area">
+              <h4>Institutional operations</h4>
+              <p>Scheduling, events, research support, administration, and coordination across faculty, students, and staff.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="programs">
+          <div class="section-title">
+            <h3>Teaching & Programs</h3>
+            <p>Johns Hopkins University, 2016–2024</p>
+          </div>
+
+          <div class="entry">
+            <div class="entry-meta">
+              <strong>Johns Hopkins University</strong>
+              2016–2024
+            </div>
+            <div class="entry-body">
+              <h4>Teaching, graduate recruitment, and academic service</h4>
+              <ul>
+                <li>Designed and taught four writing-intensive courses as instructor of record, including syllabi, assignments, grading rubrics, and discussion frameworks.</li>
+                <li>Coordinated two graduate recruitment open houses with a four-person team, four simultaneous departmental schedules, faculty and student participation, and a budget exceeding $2,000.</li>
+                <li>Represented Political Science on the inaugural advisory board of the SNF Agora Institute and later served as a Society of Fellows postdoctoral fellow.</li>
+                <li>Received the Dean’s Prize Fellowship for teaching effectiveness (4.75 versus a 4.14 university average) and the Dean’s Teaching Fellowship.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="admissions">
+          <div class="section-title">
+            <h3>Admissions & Selection</h3>
+            <p>Minerva University, 2014–2015</p>
+          </div>
+
+          <div class="entry">
+            <div class="entry-meta">
+              <strong>Minerva University</strong>
+              2014–2015
+            </div>
+            <div class="entry-body">
+              <h4>Admissions review and interviewing</h4>
+              <ul>
+                <li>Reviewed more than 1,000 applications for a newly established, highly selective university.</li>
+                <li>Conducted applicant interviews, maintained admissions records, and helped develop selection criteria and review practices.</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section id="institutional">
+          <div class="section-title">
+            <h3>Institutional Work</h3>
+            <p>Earlier experience in university operations and public-policy research support.</p>
+          </div>
+
+          <div class="entry">
+            <div class="entry-meta">
+              <strong>Williams College</strong>
+              2014
+            </div>
+            <div class="entry-body">
+              <h4>Conference operations</h4>
+              <p>
+                Supported conference guests through front-desk, registration, scheduling, room-access, equipment, and facilities workflows; maintained operational records and coordinated requests across guests, staff, and campus services.
+              </p>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-meta">
+              <strong>Rockefeller Institute of Government</strong>
+              2011
+            </div>
+            <div class="entry-body">
+              <h4>Research and administrative support</h4>
+              <p>
+                Supported front-desk operations, calls, calendaring, and donor/contact records, and built datasets on SNAP assistance and child poverty for the New York State Statistical Yearbook.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section class="about" id="about">
+          <div class="section-title">
+            <h3>About</h3>
+            <p></p>
+          </div>
+
+          <div class="about-copy">
+            <p>
+              I left Johns Hopkins in 2024 after eight years there, first as a political theory PhD student and then as a postdoctoral fellow. Since leaving, I have worked in AI evaluation and model-behavior research, including benchmark design, quality review, and empirical analysis.
+            </p>
+            <p>
+              That work has given me a more technical view of problems I had already encountered in universities: how to set standards for difficult judgment calls, how to make review processes more consistent, and how to use data without pretending that every important decision can be reduced to a metric.
+            </p>
+            <p>
+              I am interested in bringing that experience back into higher education, particularly in academic programs, assessment, graduate education, admissions, and work around AI in universities. My current technical work is collected on my <a href="https://cj-higgins.github.io/" target="_blank" rel="noreferrer">AI and research portfolio</a>.
+            </p>
+            <p>
+              I also <a href="https://anywherebutdays.substack.com/" target="_blank" rel="noreferrer">write philosophical reflections</a>,
+              <a href="https://higginscj.substack.com/" target="_blank" rel="noreferrer">write about AI, language, mathematics, and politics</a>,
+              and enjoy running in Prospect Park.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>© 2026 Christopher J. Higgins</span>
+        <span>Higher Education & Academic Programs</span>
+      </footer>
     </div>
-  </footer>
+  </div>
 </body>
 </html>
