@@ -1,0 +1,30 @@
+name: Import Contra presentation
+on:
+  push:
+    paths:
+      - '.github/workflows/import-contra-presentation.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  import-pdf:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download presentation
+        env:
+          PDF_URL: 'https://sdmntpreastus2.oaiusercontent.com/files/00000000-e3c0-81f6-a24c-4b46bdc9e592/raw?se=2026-09-18T18%3A02%3A16Z&sp=r&sv=2026-02-06&sr=b&scid=b543d56c-68e7-53d0-aa75-17ffcd357394&skoid=732f244e-db13-47c3-bcc7-7ee02a9397bc&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-18T13%3A34%3A42Z&ske=2026-09-19T13%3A34%3A42Z&sks=b&skv=2026-02-06&sig=kECbo66D%2BaHJ9NJhWZeQkmm9h8wveQb253YDpLWsHvw%3D'
+        run: |
+          curl -L --fail --retry 3 "$PDF_URL" -o Contra-Labs-Client-Presentation-Higgins.pdf
+          test -s Contra-Labs-Client-Presentation-Higgins.pdf
+      - name: Commit presentation
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Contra-Labs-Client-Presentation-Higgins.pdf
+          if git diff --cached --quiet; then
+            exit 0
+          fi
+          git commit -m "Host Contra Labs client presentation"
+          git push
