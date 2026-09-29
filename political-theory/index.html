@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="CJ Higgins — political theorist working on language, friendship, gender and sexuality, and political disagreement.">
+  <meta name="theme-color" content="#f5f0e6">
+  <link rel="canonical" href="https://cj-higgins.github.io/political-theory/">
+  <meta property="og:title" content="CJ Higgins — Political Theory">
+  <meta property="og:description" content="Teaching, research, publications, and public scholarship in political theory, gender and sexuality, and social and political philosophy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://cj-higgins.github.io/political-theory/">
+  <title>CJ Higgins — Political Theory</title>
+  <style>
+    :root{
+      --paper:#f5f0e6;
+      --sheet:#fffdf8;
+      --ink:#241f1a;
+      --muted:#6d645c;
+      --rule:#cfc3b5;
+      --wine:#6f2437;
+      --wine-dark:#4f1727;
+      --wash:#eee4d8;
+      --max:1080px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif;line-height:1.62;-webkit-font-smoothing:antialiased}
+    a{color:var(--wine);text-underline-offset:3px}
+    .shell{width:min(calc(100% - 42px),var(--max));margin:0 auto}
+    header{border-bottom:1px solid var(--rule)}
+    .topbar{min-height:66px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .name{font-weight:700;text-decoration:none;color:var(--ink);font-size:1.06rem;letter-spacing:.015em}
+    .toplinks{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:17px;font-family:Arial,Helvetica,sans-serif;font-size:.78rem;text-transform:uppercase;letter-spacing:.075em}
+    .toplinks a{color:var(--muted);text-decoration:none}
+    .toplinks a:hover,.toplinks a:focus-visible{color:var(--wine)}
+    .hero{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(260px,.5fr);gap:60px;align-items:start;padding:74px 0 70px}
+    .eyebrow{margin:0 0 17px;color:var(--wine);font-family:Arial,Helvetica,sans-serif;font-weight:700;font-size:.77rem;text-transform:uppercase;letter-spacing:.13em}
+    h1{margin:0;max-width:760px;font-size:clamp(3rem,6vw,5.6rem);line-height:.96;letter-spacing:-.047em;font-weight:500}
+    .lede{max-width:750px;margin:30px 0 0;font-size:1.26rem;line-height:1.62;color:#433b34}
+    .hero-note{margin-top:34px;padding-top:20px;border-top:1px solid var(--rule);display:grid;grid-template-columns:145px 1fr;gap:20px;max-width:760px}
+    .hero-note strong{color:var(--wine);font-family:Arial,Helvetica,sans-serif;font-size:.73rem;text-transform:uppercase;letter-spacing:.095em}
+    .hero-note p{margin:0;color:var(--muted);font-size:.98rem}
+    .portrait{width:100%;aspect-ratio:4/5;display:block;object-fit:cover;object-position:center 36%;border:1px solid var(--rule);filter:saturate(.83) contrast(.98)}
+    .caption{margin:10px 0 0;color:var(--muted);font-family:Arial,Helvetica,sans-serif;font-size:.72rem;line-height:1.4}
+    section{padding:58px 0;border-top:1px solid var(--rule)}
+    .section-grid{display:grid;grid-template-columns:210px 1fr;gap:48px}
+    .section-label{margin:2px 0 0;color:var(--wine);font-family:Arial,Helvetica,sans-serif;font-size:.78rem;font-weight:700;text-transform:uppercase;letter-spacing:.12em}
+    h2{margin:0 0 22px;font-size:clamp(2.05rem,4vw,3.3rem);line-height:1.04;letter-spacing:-.035em;font-weight:500}
+    .intro{max-width:720px;margin:0 0 30px;color:#50483f;font-size:1.05rem}
+    .teaching-list,.research-list,.service-list{border-top:1px solid var(--rule)}
+    .entry{display:grid;grid-template-columns:180px 1fr;gap:28px;padding:24px 0;border-bottom:1px solid var(--rule)}
+    .meta{color:var(--muted);font-family:Arial,Helvetica,sans-serif;font-size:.78rem;line-height:1.5}
+    .meta strong{display:block;color:var(--wine);font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px}
+    .entry h3{margin:0 0 7px;font-size:1.2rem;line-height:1.3;font-weight:700}
+    .entry p{margin:0;color:#4a423a}
+    .entry p+p{margin-top:8px}
+    .metrics{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:30px}
+    .metric{padding:22px 24px;background:var(--sheet);border:1px solid var(--rule)}
+    .metric .number{display:block;color:var(--wine-dark);font-size:2rem;line-height:1;font-weight:700}
+    .metric .label{display:block;margin-top:7px;color:var(--muted);font-family:Arial,Helvetica,sans-serif;font-size:.79rem;line-height:1.45}
+    .pub{padding:25px 0;border-top:1px solid var(--rule)}
+    .pub:first-of-type{border-top:0;padding-top:0}
+    .pub h3{margin:0 0 7px;font-size:1.3rem;line-height:1.32}
+    .pub p{margin:0;color:var(--muted)}
+    .pub .links{margin-top:9px;font-family:Arial,Helvetica,sans-serif;font-size:.82rem}
+    .public-work{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+    .public-card{padding:25px;background:var(--sheet);border:1px solid var(--rule)}
+    .public-card .kicker{margin:0 0 9px;color:var(--wine);font-family:Arial,Helvetica,sans-serif;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em}
+    .public-card h3{margin:0 0 9px;font-size:1.22rem;line-height:1.3}
+    .public-card p{margin:0;color:var(--muted);font-size:.95rem}
+    .about{padding:42px;background:var(--wine-dark);color:#f8f2e8;border-top:0;margin:62px 0 0}
+    .about h2{font-size:2.4rem;margin-bottom:18px}
+    .about p{max-width:790px;margin:0;color:#eadfd3;font-size:1.03rem}
+    .about p+p{margin-top:15px}
+    .about a{color:#fff4e8}
+    footer{padding:30px 0 42px;border-top:1px solid var(--rule);color:var(--muted);font-family:Arial,Helvetica,sans-serif;font-size:.79rem}
+    .footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+    .footer-links{display:flex;gap:15px;flex-wrap:wrap}
+    :focus-visible{outline:3px solid rgba(111,36,55,.28);outline-offset:4px}
+    @media(max-width:820px){.hero{grid-template-columns:1fr;gap:34px}.hero figure{width:min(100%,390px);margin:0}.section-grid{grid-template-columns:1fr;gap:16px}.entry{grid-template-columns:1fr;gap:7px}.public-work{grid-template-columns:1fr}.about{padding:30px}}
+    @media(max-width:540px){.shell{width:min(calc(100% - 26px),var(--max))}.topbar{align-items:flex-start;padding:18px 0}.toplinks{gap:10px 13px;font-size:.7rem}.hero{padding:50px 0}.hero-note{grid-template-columns:1fr;gap:7px}.metrics{grid-template-columns:1fr}section{padding:46px 0}}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="shell topbar">
+      <a class="name" href="#top">Christopher J. Higgins, Ph.D.</a>
+      <nav class="toplinks" aria-label="Site links">
+        <a href="#teaching">Teaching</a>
+        <a href="#research">Research</a>
+        <a href="#public">Public scholarship</a>
+        <a href="https://cj-higgins.github.io/" target="_blank" rel="noreferrer">AI &amp; research</a>
+        <a href="https://cj-higgins.github.io/higher-ed/" target="_blank" rel="noreferrer">Higher education</a>
+        <a href="mailto:ch.ja.higgins@gmail.com">Email</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="shell">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Political Theory · Gender &amp; Sexuality · Social &amp; Political Philosophy</p>
+          <h1>Language, disagreement, friendship, and political life.</h1>
+          <p class="lede">I am a political theorist and teacher working in the tradition of ordinary language philosophy. My research asks how shared concepts make political disagreement, conversation, and forms of closeness possible — and how those same concepts can obstruct them.</p>
+          <div class="hero-note">
+            <strong>Teaching</strong>
+            <p>Four writing-intensive courses designed and taught at Johns Hopkins, with additional teaching in classical and modern political thought, international relations theory, and U.S. foreign policy.</p>
+          </div>
+        </div>
+        <figure>
+          <img class="portrait" src="https://raw.githubusercontent.com/cj-higgins/cj-higgins.github.io/main/cj-higgins.jpg" alt="CJ Higgins">
+          <figcaption class="caption">Brooklyn, New York · Ph.D. in Political Science (Political Theory), Johns Hopkins University</figcaption>
+        </figure>
+      </div>
+
+      <section id="teaching">
+        <div class="section-grid">
+          <p class="section-label">Teaching</p>
+          <div>
+            <h2>Political theory as a practice of reading, argument, and conversation.</h2>
+            <p class="intro">My courses are writing-intensive and discussion-centered. I ask students to reconstruct difficult arguments, identify assumptions, test rival interpretations, and use disagreement as a way of becoming more precise about what they mean.</p>
+
+            <div class="teaching-list">
+              <article class="entry">
+                <div class="meta"><strong>Instructor of Record</strong>Johns Hopkins · 2023</div>
+                <div><h3>Gender and Friendship</h3><p>Seminar on how gender shapes friendship, drawing on feminist and queer theory, philosophy, and film.</p></div>
+              </article>
+              <article class="entry">
+                <div class="meta"><strong>Instructor of Record</strong>Johns Hopkins · 2023</div>
+                <div><h3>Genealogy of Sexual Morals</h3><p>Seminar on the historical formation of sexual norms and moral judgment, centered on Nietzsche's <em>Genealogy of Morals</em> and Foucault's <em>History of Sexuality</em>.</p></div>
+              </article>
+              <article class="entry">
+                <div class="meta"><strong>Instructor of Record</strong>Johns Hopkins · 2021</div>
+                <div><h3>Theory of Conversation</h3><p>Ordinary-language approaches to dialogue, understanding, and misunderstanding through close analysis of real and fictional conversations.</p></div>
+              </article>
+              <article class="entry">
+                <div class="meta"><strong>Instructor of Record</strong>Johns Hopkins · 2019</div>
+                <div><h3>The Politics of Conversation</h3><p>Speech, social power, and the conditions of political conversation, drawing on Plato, Habermas, Cavell, and film.</p></div>
+              </article>
+              <article class="entry">
+                <div class="meta"><strong>Teaching Assistant</strong>Johns Hopkins · 2018</div>
+                <div><h3>Authority and Liberty — Classics of Political Thought</h3><p>Classical and modern political thought through Plato, Kant, Mill, Nietzsche, Rawls, and Foucault, with emphasis on political authority and liberty.</p></div>
+              </article>
+            </div>
+
+            <div class="metrics" aria-label="Teaching distinctions and evaluations">
+              <div class="metric"><span class="number">4.75/5</span><span class="label">Teaching effectiveness, <em>The Politics of Conversation</em> (school average 4.14/5). <a href="https://drive.google.com/file/d/1HNB7eKNB-iE3SSwt9gQka8N_KUJxZ-Lf/view?usp=sharing" target="_blank" rel="noreferrer">Full evaluation ↗</a></span></div>
+              <div class="metric"><span class="number">2</span><span class="label">Johns Hopkins teaching fellowships: Dean's Teaching Fellowship (2019) and Dean's Prize Fellowship (2020).</span></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="research">
+        <div class="section-grid">
+          <p class="section-label">Research</p>
+          <div>
+            <h2>Ordinary language philosophy and the politics of concepts.</h2>
+            <p class="intro">My dissertation, <em>On Saying What You Want to Say: A Wittgensteinian Approach</em>, develops an ordinary-language approach to conceptual disagreement. My current work extends that project into political disagreement and the philosophy of friendship.</p>
+
+            <article class="pub">
+              <h3>The Politics of Concepts: The Grammar of Disagreement</h3>
+              <p>Manuscript based on dissertation research developing a Wittgensteinian account of shared meaning and political disagreement.</p>
+              <div class="links"><a href="https://drive.google.com/file/d/1frXJSdSdyDrxd70HSQyiv5u8YdAHSKyP/view?usp=drivesdk" target="_blank" rel="noreferrer">Read manuscript draft ↗</a></div>
+            </article>
+
+            <article class="pub">
+              <h3><em>Philophilia</em></h3>
+              <p>Book manuscript examining how shared concepts of friendship can both enable and obstruct closeness, using ordinary language philosophy.</p>
+              <div class="links"><a href="https://drive.google.com/file/d/1SZIUTGw5Iy76GrlzaT6V38j92IQdpF_b/view?usp=drivesdk" target="_blank" rel="noreferrer">Read manuscript selection ↗</a></div>
+            </article>
+
+            <article class="pub">
+              <h3>“Wittgenstein's New Way of Talking to Himself.”</h3>
+              <p><em>Philosophical Investigations</em> 46, no. 1 (2023): 22–49.</p>
+              <div class="links"><a href="https://doi.org/10.1111/phin.12354" target="_blank" rel="noreferrer">Publication ↗</a></div>
+            </article>
+
+            <article class="pub">
+              <h3>“Stanley Cavell Between Friends and Strangers.”</h3>
+              <p>In <em>Literature, Voice, Meaning: Philosophical Aspects</em>, edited by Garry L. Hagberg, 185–196. Palgrave Macmillan, 2025.</p>
+              <div class="links"><a href="https://doi.org/10.1007/978-3-031-71307-1_9" target="_blank" rel="noreferrer">Publication ↗</a></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="public">
+        <div class="section-grid">
+          <p class="section-label">Public scholarship</p>
+          <div>
+            <h2>Political ideas outside the seminar room.</h2>
+            <p class="intro">My public work has included reported features on law, gender, sexuality, education, and community life, alongside independent philosophical writing for a general audience.</p>
+            <div class="public-work">
+              <article class="public-card"><p class="kicker">Law · sexuality · public policy</p><h3><a href="https://www.washingtonblade.com/2024/05/29/turning-around-sex-trafficking-safe-harbor/" target="_blank" rel="noreferrer">Turning Around Sex Trafficking: One Year after Safe Harbor in Maryland ↗</a></h3><p>Reported feature on the implementation of Maryland's Safe Harbor framework and the politics of sex-trafficking policy.</p></article>
+              <article class="public-card"><p class="kicker">Education · gender · politics</p><h3><a href="https://www.washingtonblade.com/2024/03/19/moms-for-liberty-a-tale-of-two-counties/" target="_blank" rel="noreferrer">Moms For Liberty: A Tale of Two Counties ↗</a></h3><p>Reported feature on local political conflict over LGBTQ education policy and book-removal campaigns.</p></article>
+              <article class="public-card"><p class="kicker">Gender · sexuality · community</p><h3><a href="https://www.washingtonblade.com/2024/04/25/catching-up-with-the-asexuals-and-aromantics-of-d-c/" target="_blank" rel="noreferrer">Catching up with the Asexuals and Aromantics of D.C. ↗</a></h3><p>Feature on identity, community formation, and the language used to understand intimacy and desire.</p></article>
+              <article class="public-card"><p class="kicker">History · civic memory</p><h3><a href="https://www.washingtonblade.com/2023/12/21/will-the-slowe-burrill-house-become-a-national-landmark/" target="_blank" rel="noreferrer">Will the Slowe-Burrill House Become a National Landmark? ↗</a></h3><p>Reported feature on historic preservation, Black queer history, and public memory.</p></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="service">
+        <div class="section-grid">
+          <p class="section-label">Academic life</p>
+          <div>
+            <h2>Departmental service and intellectual community.</h2>
+            <div class="service-list">
+              <article class="entry"><div class="meta"><strong>Johns Hopkins</strong>2018–2020</div><div><h3>SNF Agora Institute Advisory Board Representative</h3><p>Represented the Department of Political Science on the institute's inaugural advisory board.</p></div></article>
+              <article class="entry"><div class="meta"><strong>Johns Hopkins</strong>2016–2017</div><div><h3>Graduate Recruitment Open House Coordinator</h3><p>Organized two open houses, coordinating a four-person team, four concurrent departmental schedules, and a $2,000+ budget.</p></div></article>
+              <article class="entry"><div class="meta"><strong>Johns Hopkins</strong>2017–2020</div><div><h3>Graduate Colloquium Discussant</h3><p>Invited responses to research in political theory and political science.</p></div></article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <h2>About</h2>
+        <p>I received my Ph.D. in Political Science (Political Theory) from Johns Hopkins University in 2023, where my dissertation committee included Jennifer Culbert, Michael Williams, Jane Bennett, Samuel Chambers, and Rochelle Tobias. I then served as a postdoctoral fellow in the Alexander Grass Humanities Institute's Society of Fellows and the Program for the Study of Women, Gender, and Sexuality.</p>
+        <p>I am based in Brooklyn. Alongside academic work, I have worked in public-facing journalism and in AI evaluation, where I continue to think about language, judgment, and the practical consequences of conceptual categories.</p>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <div class="shell footer-row">
+      <span>© 2026 Christopher J. Higgins</span>
+      <div class="footer-links"><a href="mailto:ch.ja.higgins@gmail.com">Email</a><a href="https://philpeople.org/profiles/cj-higgins" target="_blank" rel="noreferrer">PhilPeople</a><a href="https://www.linkedin.com/in/higginscj/" target="_blank" rel="noreferrer">LinkedIn</a><a href="https://higginscj.substack.com/" target="_blank" rel="noreferrer">Substack</a></div>
+    </div>
+  </footer>
+</body>
+</html>
