@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>CJ Higgins — Higher Education & Academic Programs</title>
-  <meta name="description" content="CJ Higgins — higher education, academic programs, assessment, admissions, and institutional work.">
+  <meta name="description" content="CJ Higgins — higher education, academic programs, assessment, admissions, data analytics, AI evaluation, and institutional work.">
   <style>
     :root{
       --blue:#123a63;
@@ -41,6 +41,7 @@
     }
 
     .rail{
+      height:100vh;
       min-height:100vh;
       background:var(--blue);
       color:#fff;
@@ -50,6 +51,8 @@
       align-self:start;
       display:flex;
       flex-direction:column;
+      overflow-y:auto;
+      overscroll-behavior:contain;
     }
     .portrait{
       width:100%;
@@ -76,7 +79,7 @@
       letter-spacing:.08em;
     }
     .rail .meta{
-      margin:30px 0 0;
+      margin:24px 0 0;
       padding-top:24px;
       border-top:1px solid rgba(255,255,255,.25);
       color:#d6e0eb;
@@ -129,11 +132,11 @@
     .content{
       width:min(calc(100% - 64px),var(--max));
       margin:0 auto;
-      padding:70px 0 80px;
+      padding:50px 0 80px;
     }
 
     .opening{
-      padding-bottom:52px;
+      padding-bottom:40px;
     }
     .opening .label{
       margin:0 0 13px;
@@ -146,7 +149,7 @@
     .opening h2{
       margin:0;
       max-width:760px;
-      font-size:clamp(2.8rem,6vw,5.8rem);
+      font-size:clamp(2.7rem,5vw,4.8rem);
       line-height:.96;
       letter-spacing:-.055em;
       font-weight:700;
@@ -244,6 +247,18 @@
       color:#3f4851;
     }
     .entry-body li+li{margin-top:8px}
+    .project-links{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
+      margin-top:14px;
+      font-size:.9rem;
+    }
+    .project-links a{
+      font-weight:600;
+      text-decoration:none;
+    }
+    .project-links a:hover{text-decoration:underline}
 
     .about{
       background:var(--wash);
@@ -286,8 +301,10 @@
     @media(max-width:760px){
       .layout{grid-template-columns:1fr}
       .rail{
+        height:auto;
         min-height:auto;
         position:relative;
+        overflow:visible;
       }
       .portrait{
         width:min(100%,340px);
@@ -320,6 +337,7 @@
         <a href="#programs">Teaching & Programs</a>
         <a href="#admissions">Admissions</a>
         <a href="#institutional">Institutional Work</a>
+        <a href="#data-ai">Data & AI</a>
         <a href="#about">About</a>
       </nav>
     </aside>
@@ -328,7 +346,7 @@
       <div class="topbar">
         <a href="mailto:ch.ja.higgins@gmail.com">Email</a>
         <a href="https://www.linkedin.com/in/higginscj/" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a href="https://cj-higgins.github.io/" target="_blank" rel="noreferrer">AI & Research</a>
+        <a href="https://cj-higgins.github.io/" target="_blank" rel="noreferrer">Data, AI & Research</a>
       </div>
 
       <main class="content">
@@ -344,7 +362,7 @@
           <div class="section-title">
             <h3>Background</h3>
             <p>
-              My higher-education work has included course design and teaching, graduate recruitment, admissions review and interviewing, university service, conference operations, and research support.
+              My higher-education work has included course design and teaching, graduate recruitment, admissions review and interviewing, university service, conference operations, research support, and empirical analysis.
             </p>
           </div>
 
@@ -364,6 +382,14 @@
             <div class="area">
               <h4>Institutional operations</h4>
               <p>Scheduling, events, research support, administration, and coordination across faculty, students, and staff.</p>
+            </div>
+            <div class="area">
+              <h4>Data & analytics</h4>
+              <p>Quantitative analysis, dataset construction, metric design, statistical modeling, and translating empirical findings into operational decisions.</p>
+            </div>
+            <div class="area">
+              <h4>AI evaluation & research</h4>
+              <p>Benchmark design, structured evaluation, quality review, and empirical analysis of model behavior in complex human contexts.</p>
             </div>
           </div>
         </section>
@@ -445,6 +471,47 @@
           </div>
         </section>
 
+        <section id="data-ai">
+          <div class="section-title">
+            <h3>Data & AI</h3>
+            <p>Selected technical work relevant to assessment, evidence, and institutional decision-making.</p>
+          </div>
+
+          <div class="entry">
+            <div class="entry-meta">
+              <strong>Quantitative analysis</strong>
+              ~14,000 interactions
+            </div>
+            <div class="entry-body">
+              <h4>Trusting the Chatbot More Than the Front Desk</h4>
+              <p>
+                Analyzed roughly 14,000 human-chatbot interactions, developed a sentiment measure, validated it with logistic regression, and examined escalation and consultation patterns. The analysis identified a class of cases in which human consultation inside an automated workflow could preserve conversational context better than a full handoff.
+              </p>
+              <div class="project-links">
+                <a href="https://higginscj.substack.com/p/trusting-the-chatbot-more-than-the" target="_blank" rel="noreferrer">Read the analysis ↗</a>
+                <a href="https://github.com/cj-higgins/BETOLD-Escalation-Analysis" target="_blank" rel="noreferrer">View the analysis repo ↗</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="entry">
+            <div class="entry-meta">
+              <strong>Model-behavior evaluation</strong>
+              54 conversations · 324 turns
+            </div>
+            <div class="entry-body">
+              <h4>California’s Crackdown on Chatbot Therapy for Minors</h4>
+              <p>
+                Designed an escalating intimacy benchmark and ran 54 conversations totaling 324 turns to test whether a conversational model maintained appropriate boundaries with a minor. Compared baseline behavior with a safety-oriented system prompt and documented patterns in warmth, boundary-setting, jailbreak resistance, and policy compliance.
+              </p>
+              <div class="project-links">
+                <a href="https://open.substack.com/pub/higginscj/p/californias-crackdown-on-chatbot?r=5b9950&amp;utm_campaign=post&amp;utm_medium=web" target="_blank" rel="noreferrer">Read the analysis ↗</a>
+                <a href="https://github.com/cj-higgins/chatgpt-friendliness-benchmark/tree/main" target="_blank" rel="noreferrer">View the benchmark repo ↗</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
         <section class="about" id="about">
           <div class="section-title">
             <h3>About</h3>
@@ -459,7 +526,7 @@
               That work has given me a more technical view of problems I had already encountered in universities: how to set standards for difficult judgment calls, how to make review processes more consistent, and how to use data without pretending that every important decision can be reduced to a metric.
             </p>
             <p>
-              I am interested in bringing that experience back into higher education, particularly in academic programs, assessment, graduate education, admissions, and work around AI in universities. My current technical work is collected on my <a href="https://cj-higgins.github.io/" target="_blank" rel="noreferrer">AI and research portfolio</a>.
+              I am interested in bringing that experience back into higher education, particularly in academic programs, assessment, graduate education, admissions, and work around AI in universities. My current technical work is collected on my <a href="https://cj-higgins.github.io/" target="_blank" rel="noreferrer">data, AI, and research portfolio</a>.
             </p>
             <p>
               I also <a href="https://anywherebutdays.substack.com/" target="_blank" rel="noreferrer">write philosophical reflections</a>,
